@@ -20,6 +20,7 @@
             padding: 15px;
             overflow-y: auto;
             border-right: 1px solid #4a5568;
+            transition: transform 0.3s ease-in-out;
         }
 
         .chat-history-item {
@@ -115,6 +116,17 @@
             border-radius: 8px;
             width: 300px;
         }
+
+        /* Sidebar toggle for mobile */
+        @media (max-width: 768px) {
+            .chat-sidebar {
+                transform: translateX(-100%);
+            }
+
+            .sidebar-open .chat-sidebar {
+                transform: translateX(0);
+            }
+        }
     </style>
 </head>
 
@@ -124,7 +136,7 @@
     <div class="chat-container">
 
         <!-- Sidebar for Chat History -->
-        <div class="chat-sidebar">
+        <div id="sidebar" class="chat-sidebar">
             <h2 class="text-xl text-white mb-4">Chat History</h2>
             <div id="history-list" class="space-y-4">
                 <!-- Dynamically populated chat history will go here -->
@@ -259,4 +271,4 @@
     </script>
 </body>
 
-  </html>
+</html>
