@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech YouTuber Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #0f0f0f; color: white; line-height: 1.6; }
+        
+        /* Navbar */
+        nav { background: #1a1a1a; padding: 20px 10%; display: flex; justify-content: space-between; align-items: center; position: fixed; width: 100%; top: 0; z-index: 1000; }
+        nav h1 { color: #ff0000; font-size: 24px; }
+        nav ul { display: flex; list-style: none; }
+        nav ul li { margin-left: 20px; }
+        nav ul li a { color: white; text-decoration: none; font-weight: bold; transition: 0.3s; }
+        nav ul li a:hover { color: #ff0000; }
+
+        /* Hero Section */
+        .hero { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&auto=format&fit=crop&w=1352&q=80'); background-size: cover; background-position: center; }
+        .hero h2 { font-size: 50px; margin-bottom: 10px; }
+        .hero p { font-size: 20px; color: #ccc; margin-bottom: 20px; }
+        .btn { background: #ff0000; color: white; padding: 12px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; transition: 0.3s; }
+        .btn:hover { background: #cc0000; }
+
+        /* Videos Section */
+        .section { padding: 80px 10%; text-align: center; }
+        .section h2 { font-size: 35px; margin-bottom: 40px; border-bottom: 3px solid #ff0000; display: inline-block; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .card { background: #1a1a1a; padding: 15px; border-radius: 10px; transition: 0.3s; }
+        .card:hover { transform: translateY(-10px); }
+        .video-placeholder { width: 100%; height: 180px; background: #333; border-radius: 5px; margin-bottom: 15px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+        .video-placeholder img { width: 100%; height: 100%; object-fit: cover; }
+
+        /* Footer */
+        footer { background: #1a1a1a; padding: 40px; text-align: center; }
+        .social-icons a { color: white; font-size: 30px; margin: 0 15px; transition: 0.3s; }
+        .social-icons a:hover { color: #ff0000; }
+        footer p { margin-top: 20px; color: #777; }
+
+        @media (max-width: 768px) { .hero h2 { font-size: 35px; } nav ul { display: none; } }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <h1>TECH CHANNEL</h1>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#videos">Videos</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero" id="home">
+        <h2>Hey, I'm [Your Name]</h2>
+        <p>Tech Enthusiast | Gadget Reviewer | Programmer</p>
+        <a href="https://youtube.com" target="_blank" class="btn"><i class="fab fa-youtube"></i> Subscribe Now</a>
+    </section><section class="section" id="videos">
+        <h2>Latest Uploads</h2>
+        <div class="grid">
+            <div class="card">
+                <div class="video-placeholder">
+                    <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg" alt="Video Thumb">
+                </div>
+                <h3>Best Budget Laptop 2024</h3>
+                <p>Reviewing the top laptops under $500.</p>
+            </div>
+            <div class="card">
+                <div class="video-placeholder">
+                    <img src="https://img.youtube.com/vi/70atn-xVvJ0/hqdefault.jpg" alt="Video Thumb">
+                </div>
+                <h3>Setup Tour 2024</h3>
+                <p>My workspace and productivity tools.</p>
+            </div>
+            <div class="card">
+                <div class="video-placeholder">
+                    <img src="https://img.youtube.com/vi/3JZ_D3ELwOQ/hqdefault.jpg" alt="Video Thumb">
+                </div>
+                <h3>How to Build a PC</h3>
+                <p>Step by step guide for beginners.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <h2>Let's Connect</h2>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+        <p>&copy; 2024 Your Channel Name. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
